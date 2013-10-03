@@ -1,0 +1,3 @@
+class Waitress
+
+end
