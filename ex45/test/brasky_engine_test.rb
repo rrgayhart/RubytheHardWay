@@ -19,16 +19,27 @@ class BraskyEngineTest < MiniTest::Test
 
   def test_it_should_have_a_welcome_prompt
     response = @game.welcome('hello')
-    assert_equal response, 'well, hello'
+    assert_equal 'error', response
+  end
+
+  def test_it_should_index_input
+    response = @game.input_with_index("go to")
+    assert_equal response, [["go", 0], ["to", 1]]
   end
 
   def test_it_should_go_to_the_bar
     response = @game.welcome("bar")
-    assert_equal response, Bar.new("bar")
+    assert_kind_of Bar, response
   end
 
   def test_it_should_handle_long_inputs
     response = @game.welcome("I don't know, go to the bar I guess")
-    assert_equal response, Bar.new("I don't know, go to the bar I guess")
+    assert_kind_of Bar, response
   end
+
+  def test_end_should_end_game
+    response = @game.welcome("end")
+    assert_equal nil, response
+  end
+
 end
