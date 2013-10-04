@@ -6,6 +6,12 @@ module Parse
     result
   end
 
+  def starter(input)
+    unless input.chomp == 'end'
+      welcome(input)
+    end
+  end
+
   def input_to_array(input)
     input.split
   end

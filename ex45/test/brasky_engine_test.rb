@@ -38,7 +38,7 @@ class BraskyEngineTest < MiniTest::Test
   end
 
   def test_end_should_end_game
-    response = @game.welcome("end")
+    response = @game.starter("end")
     assert_equal nil, response
   end
 

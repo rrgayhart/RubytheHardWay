@@ -1,3 +1,5 @@
+# GO THROUGH AND RETURN THE COMMENTED OUT STORY CALLS
+
 require_relative 'bar'
 require_relative 'bartable'
 require_relative 'funeral'
@@ -9,15 +11,17 @@ class BraskyEngine
   include Stories
   include Parse
 
+  def starting(input)
+    starter(input)
+  end
+
   def welcome(input)
-    exterior_story
-    unless input.chomp == 'end'
+#ADD BACK -->    #exterior_story
       if input_to_array(input).include? ('bar')
         Bar.new
       else
         unrecognized_command
       end
-    end
   end
 
 end
