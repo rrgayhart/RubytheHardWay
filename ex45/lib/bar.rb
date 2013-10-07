@@ -6,31 +6,28 @@ class Bar
   include Parse
 
   def initialize
-    #remove the comment after testing to make game functional
-    #welcome
-  end
-
-  def prompt
-    puts "> "
-    response = gets.chomp
-    response.input_to_array
-    bar_decision(response)
+    welcome
   end
 
   def welcome
-#=> ADD ME    #bar_story
-    prompt
+    bar_story
+    bar_decision
   end
 
-  def bar_decision(response)
-    if response.include? "waitress"
-      Waitress.new
-    elsif response.include?("table") || response.include?("friend")
-      BarTable.new
-    elsif response.include?("run") || response.include?("scream")
-      starter("end")
-    else
-      unrecognized_command
+  def bar_decision
+    prompt
+    response = gets.chomp
+    unless response == "exit"
+      if response.include? "waitress"
+        Waitress.new
+      elsif response.include?("table") || response.include?("friend")
+        BarTable.new
+      elsif response.include?("run") || response.include?("scream")
+        puts "Hey, that's only fair"
+      else
+        unrecognized_command
+        bar_decision
+      end
     end
   end
 

@@ -11,22 +11,27 @@ class BraskyEngine
   include Stories
   include Parse
 
-  def starting(input)
-    starter(input)
+  def welcome
+      exterior_story
+      next_move
   end
 
-  def welcome(input)
-#ADD BACK -->    #exterior_story
-      if input_to_array(input).include? ('bar')
-        Bar.new
-      else
-        unrecognized_command
+  def next_move
+      prompt
+      input = gets.chomp
+      unless input == "exit"
+        if input_to_array(input).include?('bar') || input_to_array(input).include?('yes') 
+          Bar.new
+        elsif input_to_array(input).include?('no')
+          puts "Your loss."
+        else
+          unrecognized_command
+          next_move
+        end
       end
   end
 
 end
 
-#game = BraskyEngine.new
-#input = gets.chomp
-#game.welcome(input)
-#don't forget to change this to parse
+game = BraskyEngine.new
+game.welcome

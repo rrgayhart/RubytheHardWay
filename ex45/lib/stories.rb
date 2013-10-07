@@ -1,10 +1,5 @@
 module Stories
 
-  def unrecognized_command
-    puts "I don't recognize that command. Try again."
-    return "error"
-  end
-
   def exterior_story
     puts "You are standing outside of an old, run down bar."
     puts "The place looks like Cheers"
@@ -24,6 +19,12 @@ module Stories
   end
 
   def waitress_story
+    puts "You sidle up to the waitress and ask her for her number"
+    puts "She replies..."
+    waitress_reply
+  end
+
+  def waitress_reply
     puts "Sorry. I'm saving myself for Braskey"
   end
 
