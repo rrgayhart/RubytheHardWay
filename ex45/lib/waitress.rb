@@ -1,15 +1,18 @@
 require_relative 'stories'
 require_relative 'parse'
 
+## Would like to add a way to add to the counter but having trouble getting += to worl
+
 class Waitress
   include Stories
   include Parse
 
-  attr_accessor :count
-
   def initialize
     accost
-    @count = 0
+  end
+
+  def counter
+    @counter = 0
   end
 
   def accost
@@ -20,7 +23,12 @@ class Waitress
   end
 
   def try_again(answer)
-    "shit"
+    if answer == "yes"
+      accost
+    else
+      puts "You gave up and go back to meet up with your buddies."
+      BarTable.new
+    end
   end
 
 end
