@@ -20,7 +20,7 @@ class Bar
     unless response == "exit"
       if response.include? "waitress"
         Waitress.new
-      elsif response.include?("table") || response.include?("friend")
+      elsif response.include?("table") || response.include?("friend") || response.include?("sit")
         BarTable.new
       elsif response.include?("run") || response.include?("scream")
         puts "Hey, that's only fair"
