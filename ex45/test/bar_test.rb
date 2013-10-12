@@ -19,26 +19,31 @@ class BarTest < MiniTest::Test
   end
 
   def test_it_should_go_to_waitress
+    skip
     response = @bar.bar_decision("waitress")
     assert_kind_of Waitress, response
   end
 
   def test_it_should_have_a_welcome_prompt
+    skip
     response = @game.welcome('hello')
     assert_equal 'error', response
   end
 
   def test_it_should_go_to_bar_table
+    skip
     response = @bar.bar_decision("table")
     assert_kind_of BarTable, response
   end
 
   def test_it_should_handle_any_input_length
+    skip
     response = @bar.bar_decision("I want to go to the friend")
     assert_kind_of BarTable, response
   end
 
   def test_run_screaming_should_end_game
+    skip
     response = @bar.bar_decision("screaming")
     assert_equal nil, response
   end
