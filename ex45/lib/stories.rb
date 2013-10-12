@@ -8,11 +8,11 @@ module Stories
   end
 
   def bar_story
-    puts "You open the shitty, rusty door and enter the bar."
+    puts "You open the creaky, rusty door and enter the bar."
     puts "It smells like stale beer and minor regrets..."
     puts "Your eyes adjust to the light and you see a few options"
     puts "Your friends are seated around a table, do you sit at the table?"
-    puts "Do you hit on the waitress"
+    puts "Do you hit on the waitress?"
     puts "Do you run screaming out of the bar?"
     return "bar story"
     ###Need to add another option!
