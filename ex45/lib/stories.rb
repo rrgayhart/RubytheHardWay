@@ -20,12 +20,17 @@ module Stories
 
   def waitress_story
     puts "You sidle up to the waitress and ask her for her number"
-    puts "She replies..."
     waitress_reply
   end
 
   def waitress_reply
-    puts "Sorry. I'm saving myself for Braskey"
+    print "She replies... "
+    puts "\'Sorry. I'm on the clock.\'"
+  end
+
+  def final_waitress_reply
+    print "She shakes her head and replies... "
+    puts "I admire your dedication, but I'm gay"
   end
 
   def short_brasky_stories
