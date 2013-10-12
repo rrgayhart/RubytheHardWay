@@ -12,6 +12,7 @@ class BraskyEngine
   include Parse
 
   def welcome
+      warning_story
       exterior_story
       next_move
   end

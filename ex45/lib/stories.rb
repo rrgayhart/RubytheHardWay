@@ -1,5 +1,12 @@
 module Stories
 
+  def warning_story
+    puts "This command line game is based on the Saturday Night Live sketches."
+    puts "All Brasky lines come from SNL transcripts."
+    puts "It gets weird. You've been warned."
+    puts "---------------------------------------------"
+  end
+
   def exterior_story
     puts "You are standing outside of an old, run down bar."
     puts "The place looks like Cheers"

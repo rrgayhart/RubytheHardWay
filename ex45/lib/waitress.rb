@@ -32,6 +32,7 @@ class Waitress
   def try_again(answer)
     if answer == "yes"
       unless @lines == []
+        puts "----------------"
         puts "You decide to try one of your favorite lines: "
         puts @lines.pop
         waitress_reply
