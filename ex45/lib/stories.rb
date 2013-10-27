@@ -25,14 +25,14 @@ module Stories
     ###Need to add another option!
   end
 
-  def waitress_story
-    puts "You sidle up to the waitress and ask her for her number"
+  def waitress_story(output = $stdout)
+    output.puts "You sidle up to the waitress and ask her for her number"
     waitress_reply
   end
 
-  def waitress_reply
-    print "She replies... "
-    puts "\'Sorry. I'm on the clock.\'"
+  def waitress_reply(output = $stdout)
+    output.print "She replies... "
+    output.puts "\'Sorry. I'm on the clock.\'"
   end
 
   def final_waitress_reply
